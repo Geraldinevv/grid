@@ -1,0 +1,72 @@
+* {
+  padding: 0 !important;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header header header header header" "aside aside main main main" "aside aside main main main" "aside aside main main main" "aside aside main main main" "footer footer footer footer footer";
+  grid-auto-rows: minmax(50px, auto);
+  background: red;
+  height: 100vh;
+  padding: 15px;
+  color: white;
+}
+.grid-container header {
+  grid-area: header;
+  background-color: yellow;
+  color: black;
+}
+.grid-container aside {
+  grid-area: aside;
+  background: green;
+  min-width: 200px;
+}
+.grid-container main {
+  grid-area: main;
+  background: gray;
+  overflow-y: scroll;
+}
+.grid-container main .cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.grid-container main .cards-container .card_container {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+.grid-container main .cards-container .card_container .card_header {
+  min-height: 30px;
+}
+.grid-container main .cards-container .card_container .card_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  width: 300px;
+}
+.grid-container main .cards-container .card_container .card_body img {
+  transition: all 1s ease-in-out;
+  width: 250px;
+  opacity: 1;
+}
+.grid-container main .cards-container .card_container .card_body:hover {
+  background-color: chocolate;
+}
+.grid-container main .cards-container .card_container .card_body:hover img {
+  transform: translateY(60%);
+  opacity: 0.1;
+}
+.grid-container main .cards-container .card_container .card_footer {
+  min-height: 30px;
+}
+.grid-container footer {
+  grid-area: footer;
+  background-color: yellowgreen;
+}/*# sourceMappingURL=styles.css.map */
