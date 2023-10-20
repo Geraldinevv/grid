@@ -1,0 +1,76 @@
+* {
+  padding: 0 !important;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header header header header header" "aside aside main main main" "aside aside main main main" "aside aside main main main" "aside aside main main main" "footer footer footer footer footer";
+  grid-auto-rows: minmax(50px, auto);
+  background: white;
+  height: 100vh;
+  padding: 15px;
+  color: black;
+}
+.grid-container header {
+  grid-area: header;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.grid-container aside {
+  grid-area: aside;
+  background: rgb(194, 189, 189);
+  min-width: 200px;
+}
+.grid-container main {
+  grid-area: main;
+  background: rgb(194, 189, 189);
+  overflow-y: scroll;
+}
+.grid-container main .cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.grid-container main .cards-container .card_container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+}
+.grid-container main .cards-container .card_container .card_header {
+  min-height: 30px;
+}
+.grid-container main .cards-container .card_container .texto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container main .cards-container .card_container .card_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  width: 300px;
+}
+.grid-container main .cards-container .card_container .card_footer {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
+}
+.grid-container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  background-color: white;
+}/*# sourceMappingURL=styles.css.map */
